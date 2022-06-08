@@ -1,0 +1,26 @@
+<ng-container *ngIf="!coinsDataLoaded">
+  <mat-spinner></mat-spinner>
+</ng-container>
+
+<ng-container *ngIf="coinsDataLoaded">
+  <h1>Coins</h1>
+
+  <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+    <ng-container matColumnDef="coin-name">
+      <th *matHeaderCellDef mat-header-cell>Name</th>
+      <td *matCellDef="let coin" mat-cell><a [routerLink]="['/coin', coin.id]">{{coin.name}}</a></td>
+    </ng-container>
+
+    <ng-container matColumnDef="coin-price">
+      <th *matHeaderCellDef mat-header-cell>Price in USD</th>
+      <td *matCellDef="let coin" mat-cell>${{ coin.current_price }}</td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns: displayedColumns;" mat-row [@rowsAnimation]=""></tr>
+  </table>
+
+</ng-container>
+
+

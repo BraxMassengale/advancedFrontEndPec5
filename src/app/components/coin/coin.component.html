@@ -1,0 +1,31 @@
+<ng-container *ngIf="!coinDataLoaded">
+  <mat-spinner></mat-spinner>
+</ng-container>
+
+<ng-container *ngIf="coin != undefined && coinDataLoaded">
+  <mat-card class="coin-card">
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/coins']"><mat-icon>arrow_back</mat-icon></button>
+    </mat-card-actions>
+    <mat-card-header>
+      <img mat-card-avatar src="{{ coin.image }}" alt="{{coin.name}}">
+      <mat-card-title>{{ coin.name }}</mat-card-title>
+      <mat-card-subtitle>{{ coin.symbol }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-expansion-panel (opened)="showContent = true" (closed)="showContent = false">
+        <mat-expansion-panel-header>
+          <span *ngIf="!showContent">Show Details</span>
+          <span *ngIf="showContent">Hide Details</span>
+        </mat-expansion-panel-header>
+        <ul>
+          <li>All Time High: $ {{ coin.ath }}</li>
+          <li>Circulating Supply: {{ coin.circulating_supply }}</li>
+          <li>Market Cap: $ {{ coin.market_cap }}</li>
+          <li>Percent Price Change 24H: % {{ coin.price_change_percentage_24h }}</li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-card-content>
+  </mat-card>
+</ng-container>
+
