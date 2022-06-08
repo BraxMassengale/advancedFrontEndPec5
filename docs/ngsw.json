@@ -1,0 +1,104 @@
+{
+  "configVersion": 1,
+  "timestamp": 1654698958246,
+  "index": "/pwa-pec5/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/pwa-pec5/favicon.ico",
+        "/pwa-pec5/index.html",
+        "/pwa-pec5/main.68fd1bed3d00fb6e.js",
+        "/pwa-pec5/manifest.webmanifest",
+        "/pwa-pec5/polyfills.b434f07631b7e77d.js",
+        "/pwa-pec5/runtime.5c5b8e932f7b26ac.js",
+        "/pwa-pec5/styles.cf3eed7c137a88d9.css"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css2\\?family=Roboto:wght@300;400;500&amp;display=swap",
+        "https:\\/\\/fonts\\.gstatic\\.com",
+        "https:\\/\\/cdn\\.jsdelivr\\.net\\/npm\\/bootstrap@5\\.0\\.2\\/dist\\/css\\/bootstrap\\.min\\.css"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/pwa-pec5/assets/css/animate.css",
+        "/pwa-pec5/assets/icons/icon-128x128.png",
+        "/pwa-pec5/assets/icons/icon-144x144.png",
+        "/pwa-pec5/assets/icons/icon-152x152.png",
+        "/pwa-pec5/assets/icons/icon-192x192.png",
+        "/pwa-pec5/assets/icons/icon-384x384.png",
+        "/pwa-pec5/assets/icons/icon-512x512.png",
+        "/pwa-pec5/assets/icons/icon-72x72.png",
+        "/pwa-pec5/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "coins-api",
+      "patterns": [
+        "https:\\/\\/api\\.coingecko\\.com\\/api\\/v3\\/coins\\/markets\\?vs_currency=usd&order=market_cap_desc",
+        "https:\\/\\/api\\.coingecko\\.com\\/api\\/v3\\/coins\\/markets\\?vs_currency=usd&ids=[^/]*[^/]*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 3600000,
+      "timeoutMs": 1000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/pwa-pec5/assets/css/animate.css": "17f4832572f77640ae51ba916ac2055c15a9fb3c",
+    "/pwa-pec5/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/pwa-pec5/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/pwa-pec5/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/pwa-pec5/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/pwa-pec5/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/pwa-pec5/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/pwa-pec5/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/pwa-pec5/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/pwa-pec5/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/pwa-pec5/index.html": "203badb0ccaab7f37afbd64739a102da0e6b917c",
+    "/pwa-pec5/main.68fd1bed3d00fb6e.js": "92ab1be76d2d5c2cc8b2524ad1b62ff6581ab337",
+    "/pwa-pec5/manifest.webmanifest": "05f2f58b2f56c7694522fbf17c0c66d2fa556830",
+    "/pwa-pec5/polyfills.b434f07631b7e77d.js": "9bde3ad31cc8179e88b418304611292e18b58fbc",
+    "/pwa-pec5/runtime.5c5b8e932f7b26ac.js": "c41011102d0d978b13857e33c18d12d871258537",
+    "/pwa-pec5/styles.cf3eed7c137a88d9.css": "fc5ab8f5cbb10c12a962e666cc856b4a6ea8996d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
